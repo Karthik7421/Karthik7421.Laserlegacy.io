@@ -1,101 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products | Laser Legacy</title>
+  <meta charset="UTF-8">
+  <title>Laser Legacy - Products</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Helvetica', sans-serif;
       background-color: #111;
       color: white;
-    }
-
-    nav {
-      background-color: #000;
-      padding: 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 40px;
-    }
-
-    .product-card {
-      background-color: #222;
-      border-radius: 10px;
+      font-family: sans-serif;
       padding: 20px;
-      width: 220px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background-color: #222;
+      padding: 15px;
+      border-radius: 10px;
       text-align: center;
     }
-
-    .product-card img {
+    .product img {
       width: 100%;
       border-radius: 8px;
     }
-
-    .product-card h3 {
-      margin-top: 15px;
-      font-size: 1.2rem;
+    .price {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
     }
-
-    .product-card p {
-      font-size: 0.9rem;
-      color: #ccc;
+    .buy-btn {
+      margin-top: 10px;
+      background: #00ffae;
+      color: #000;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- Products Section -->
-  <section class="section">
-    <h1>Our Products</h1>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200x150" alt="Product 1">
-        <h3>Product 1</h3>
-        <p>Eco-friendly design made from recycled materials.</p>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200x150" alt="Product 2">
-        <h3>Product 2</h3>
-        <p>Modern look, sustainable core. Built to last.</p>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200x150" alt="Product 3">
-        <h3>Product 3</h3>
-        <p>Minimalist craftsmanship for a bold lifestyle.</p>
-      </div>
+  <h1>Our Products</h1>
+  <div class="product-grid">
+    
+    <div class="product">
+      <img src="product1.jpg" alt="Product 1">
+      <h2>Laser Art Frame</h2>
+      <div class="price">₹999</div>
+      <a href="https://buy.stripe.com/test_checkout" class="buy-btn">Buy Now</a>
     </div>
-  </section>
 
+    <div class="product">
+      <img src="product2.jpg" alt="Product 2">
+      <h2>Engraved Keychain</h2>
+      <div class="price">₹299</div>
+      <a href="https://buy.stripe.com/test_checkout" class="buy-btn">Buy Now</a>
+    </div>
+
+    <!-- Add more products below by duplicating -->
+
+  </div>
 </body>
 </html>
