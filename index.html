@@ -1,33 +1,89 @@
-<div class="hero-animation">
-  <h1 class="brand-name">Laser Legacy</h1>
-</div>
-
-<style>
-  .hero-animation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    overflow: hidden;
-    text-align: center;
-  }
-
-  .brand-name {
-    font-size: 3.5rem;
-    color: #00ffae;
-    font-family: 'Arial Black', sans-serif;
-    text-transform: uppercase;
-    animation: glow 2s ease-in-out infinite alternate;
-    letter-spacing: 3px;
-  }
-
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 10px #00ffae, 0 0 20px #00ffae, 0 0 30px #00ffae;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Laser Legacy</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
     }
-    to {
-      text-shadow: 0 0 20px #00ffd5, 0 0 30px #00ffd5, 0 0 40px #00ffd5;
+
+    /* Navbar */
+    nav {
+      background-color: #000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-  }
-</style>
+
+    nav .logo {
+      font-size: 24px;
+      color: #00ffae;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #00ffae;
+    }
+
+    /* Hero Animation */
+    .hero-animation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .brand-name {
+      font-size: 3.5rem;
+      color: #00ffae;
+      font-family: 'Arial Black', sans-serif;
+      text-transform: uppercase;
+      animation: glow 2s ease-in-out infinite alternate;
+      letter-spacing: 3px;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00ffae, 0 0 20px #00ffae, 0 0 30px #00ffae;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffd5, 0 0 30px #00ffd5, 0 0 40px #00ffd5;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Laser Legacy</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li
