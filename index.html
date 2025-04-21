@@ -18,6 +18,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav .logo {
@@ -31,10 +34,8 @@
       list-style: none;
       display: flex;
       gap: 20px;
-    }
-
-    nav ul li {
-      display: inline;
+      margin: 0;
+      padding: 0;
     }
 
     nav ul li a {
@@ -52,10 +53,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      height: 70vh;
       background: linear-gradient(135deg, #000000, #1a1a1a);
-      overflow: hidden;
       text-align: center;
+      padding: 20px;
     }
 
     .brand-name {
@@ -75,6 +76,62 @@
         text-shadow: 0 0 20px #00ffd5, 0 0 30px #00ffd5, 0 0 40px #00ffd5;
       }
     }
+
+    /* Intro Section */
+    .intro {
+      text-align: center;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    /* Featured Products */
+    .featured-products {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: #222;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .buy-btn {
+      margin-top: 10px;
+      background: #00ffae;
+      color: #000;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
@@ -86,4 +143,32 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-animation">
+    <h1 class="brand-name">Laser Legacy</h1>
+  </div>
+
+  <!-- Intro Text -->
+  <div class="intro">
+    <p>Welcome to Laser Legacy – where innovation meets identity. We craft high-quality custom laser engraved products that leave a lasting impression. Explore our collection and take your brand or gifting game to the next level.</p>
+  </div>
+
+  <!-- Featured Product -->
+  <div class="featured-products">
+    <h2 style="text-align: center; color: #00ffae;">Featured Product</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="metalcard.jpg" alt="Metal Card">
+        <h3>Metal Card</h3>
+        <div class="price">₹2499</div>
+        <a href="https://upilinks.in/payment-link/upi837756534" class="buy-btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
